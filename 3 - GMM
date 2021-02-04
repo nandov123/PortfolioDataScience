@@ -25,3 +25,17 @@ K-Means desvantagens endereçadas no GMM:
 •	Não traz uma visão de probabilidade de designação de cluster
 •	
 
+Como funciona?
+São atribuídos pesos a cada uma das gaussianas (baseado na proporção de elementos no dataset) pi.
+Cada gaussiana (cluster) tb tem uma média (mi), que denota sua localização e uma variância (sigma)
+
+Choose starting guesses for the location and shape
+
+Repeat until converged:
+
+E-step: for each point, find weights encoding the probability of membership in each cluster
+M-step: for each cluster, update its location, normalization, and shape based on all data points, making use of the weights
+
+Tipos de covariância: diag que é a default, deta o tamanho do cluster em cada dimensão de forma independente.
+Esférico: similar ao kmeans
+Full: mais computacionalmente complexo, permite a modelagem de cada cluster com orientações arbitrárias das elipses
