@@ -1,0 +1,27 @@
+- No próximo encontro do Estudo Dirigido vamos falar sobre: Gaussian Mixture Models (GMM)
+                - O que são gaussianas?
+É uma distribuição de probabilidades, também chamada de distribuição normal, muito encontradas em eventos em fenômenos naturais.
+Nessas distribuições existe um pico de eventos mais prováveis e uma deriva para os mais improváveis conforme se afasta do pico de maior probabilidade.
+Nessas curvas, temos a média, moda e mediana iguais ou muito próximas.
+                - O que as gaussianas fazem no GMM?
+Elas definem os clusters e mostram os locais onde haveria maior probabilidade dos pontos se localizarem.
+                - Como inicializar as gaussianas?
+A maneira mais fácil de inicializar é escolhendo um número razoável de clusteres identificado através de um modelo mais simples, como o K-means
+                - Como encontrar a quantidade certa de gaussianas?
+Através da iteração de etapas de Esperança-Maximização. 
+Esperança: buscará um peso para a probabilidade do ponto estar em um cluster.
+Maximização: atualizar a localização, normalização e forma baseado em todos os pontos e no peso calculado na etapa de esperança. 
+- Normalmente o intuito da discussão é abordar os seguintes pontos sobre os algoritmos e técnicas:
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
+K-Means desvantagens endereçadas no GMM:
+•	Não consegue identificar clusteres retangulares ou elípticos
+•	Não traz uma visão de probabilidade de designação de cluster
+•	
+
