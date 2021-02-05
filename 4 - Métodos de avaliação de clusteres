@@ -1,0 +1,79 @@
+1º Avaliar se a distribuição existente é clusterizável:
+Isso pode ser feito via teste de Hopkins que avalia a uniformidade da distribuição.
+No teste, se H < 0,5 a distribuição é mais uniforme e é improvável que possam ser encontrados clusteres.
+https://matevzkunaver.wordpress.com/2017/06/20/hopkins-test-for-cluster-tendency/
+                - Como determinar a quantidade ideal de Clusters?
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
+                - Métricas de avaliação intra-cluster e extra-cluster;
+Intra-cluster: avalia a distância dentro do cluster, entre os pontos ou entre cada ponto e o centróide.
+Extra-cluster: avalia a distância entre os clusteres, pode ser entre pontos dos clusteres (mais próximos ou mais distantes), entre centróides ou entre pontos e centróides.
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
+                - Inércia (erro médio quadrático);
+Utilizada no método do cotovelo. Considera a soma das distâncias entre cada pontos e o centroide do cluster.
+Quanto menor a distância mais compacto é o cluster e melhor ele seria.
+Pelo método do cotovelo, o melhor número de clusters seria aquele com a maior queda a inércia entre um ponto e outro.
+A desvantagem desse método é que ele leva em consideração apenas as distâncias intra-cluster e não as extra-cluster.
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
+                - Coeficiente de silhueta;
+É a diferença entre as distâncias médias extra cluster dividido pela distância média máxima intra cluster:
+S = (b-a)/max(a,b)
+É uma ótima métrica, pois considera tanto as distâncias intra quanto extra cluster, porém tem um custo computacional alto.
+Quanto maior, melhor.
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
+                - Coeficiente de silhueta simplificado;
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
+                - Coeficiente de Calink-Harabaz;
+É a soma das distâncias médias intra-cluster, dividido pela distância média extra-cluster.
+Também tem um custo computacional alto.
+Quanto menor, melhor.
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
+                - Índice de Davies-Bouldin;
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
