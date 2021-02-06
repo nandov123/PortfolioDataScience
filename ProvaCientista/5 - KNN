@@ -1,0 +1,58 @@
+ - O que é classificação? O que são algoritmos para classificação?
+- O que é o algoritmo KNN?
+É um algoritmo de machine learning:
+Supervisionado;
+Não paramétrico, visto que não assume um padrão de distribuição de dados;
+Algoritmo preguiçoso, visto que não tem um passo de treino, o que o torna mais custoso computacionalmente
+Usado para classificação e regressão
+Usa similaridade de feature para dizer onde o novo ponto cairá
+- Como ele funciona? (Vamos fazer algumas interações do algoritmo para entender como ele funciona)
+Funciona melhor para datasets pequenos sem noise/outliers
+Como avaliar acurácia do KNN: utilizando o K fold cross validation
+1: Selecione k (deve ser ímpar), muitas vezes pode ser a raiz do número de pontos.
+2: Encontrar a distância do novo ponto para todos os outros pontos
+3: Encontrar os k vizinhos mais próximos do novo ponto
+4: Classificação: contar o número de pontos de cada categoria dentro dos k vizinhos. O novo ponto pertence a categoria com mais pontos dentro dos k vizinhos
+Regressão: Valor do novo ponto será a média dos vizinhos.
+- Como as medidas de distância podem impactar o KNN?
+Euclidiana (numérico): simétrica, esférica, trata todas as dimensões igualmente. É sensível a diferenças muito grandes em um único atributo
+Hamming (variáveis categóricas): 
+Minkowski: se p -> infinito: é como um logical or
+Se p-> 0: é como um logical and
+- Como a escala impacta o KNN? Como podemos corrigir o problema de escala?  
+- Como os outliers impactam o KNN?
+Qnd existe mt noise, um k maior pode ajudar.
+Em k’s pequenos o algoritmo pode se tornar bastante tendencioso aos outliers.
+
+- Como podemos tornar o KNN mais rápido? (KD Tree, Ball Tree, CNN)
+KD Tree e Ball Tree são algoritmos de árvore binários. Eles criam clusteres a partir dos dados de treino, o que deixa mais fácil e rápido para o algoritmo assinalar em qual cluster o novo ponto está e assim classifica-lo.
+Ball Tree: Assinala todos os pontos a um único cluster e assinala seu centróide. Assinala o ponto mais distante desse centróide como o cluster 2 e o pontos mais distante desse ponto como cluster 3. As divisões se dão sucessivamente dentro de cada cluster formado.
+Melhor quando existem muitas dimensões
+KD Tree: Se baseia na distribuição de pontos dentro do gráfico x,y e pega a mediana dos pontos dentro dos eixos.
+Pior quando temos muitas dimensões
+
+- Quais funções de votação podemos usar? (Só o voto majoritário?)
+Não, podemos também dar pesos diferentes aos pontos, por exemplo considerando que os pontos mais próximos tem um peso maior influenciam mais na classificação weights = ‘uniform’ x weights = ‘distance’. Também é possível utilizar uma função de peso definida pelo usuário.
+- Vantagens? Desvantagens? (Como lidar com as desvantagens?)  
+Pros:
+•	Algoritmo simples, fácil de explicar predição
+•	Não paramétrico
+•	Usado para classificação e regressão
+•	O passo de treinamento é bastante rápido quando comparado a outros algoritmos de machine learning
+Cons:
+•	Computacionalmente exigente, pois procura os vizinhos no estágio de predição
+•	Demanda bastante memória, pois precisa armazenar todos os pontos
+•	Estágio de predição é bastante custoso
+•	É sensível a outliers, a predição pode ser impactada por noise ou dados irrelevantes
+•	Ñ lida bem com valores faltantes: para endereçar, preencher com a média dos valores do dataset como um todo.
+
+- Normalmente o intuito da discussão é abordar os seguintes pontos sobre os algoritmos e técnicas:
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
+
