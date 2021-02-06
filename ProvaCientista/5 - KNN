@@ -31,6 +31,7 @@ Melhor quando existem muitas dimensões
 KD Tree: Se baseia na distribuição de pontos dentro do gráfico x,y e pega a mediana dos pontos dentro dos eixos.
 Pior quando temos muitas dimensões
 
+
 - Quais funções de votação podemos usar? (Só o voto majoritário?)
 Não, podemos também dar pesos diferentes aos pontos, por exemplo considerando que os pontos mais próximos tem um peso maior influenciam mais na classificação weights = ‘uniform’ x weights = ‘distance’. Também é possível utilizar uma função de peso definida pelo usuário.
 - Vantagens? Desvantagens? (Como lidar com as desvantagens?)  
@@ -45,6 +46,8 @@ Cons:
 •	Estágio de predição é bastante custoso
 •	É sensível a outliers, a predição pode ser impactada por noise ou dados irrelevantes
 •	Ñ lida bem com valores faltantes: para endereçar, preencher com a média dos valores do dataset como um todo.
+Não dá bons resultantes quando o dataset tem mts direções (pode ser enderaçdo com PCA)
+Não lida bem com variáveis categóricas
 
 - Normalmente o intuito da discussão é abordar os seguintes pontos sobre os algoritmos e técnicas:
                 - O que é?
@@ -54,5 +57,7 @@ Cons:
                 - Quais são as vantagens?
                 - Quais são as desvantagens?
                 - Como corrigimos ou contornamos estas desvantagens?
+                
+                
 
 
