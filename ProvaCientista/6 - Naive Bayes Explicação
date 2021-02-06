@@ -1,0 +1,38 @@
+- No próximo encontro do Estudo Dirigido vamos falar sobre: Naive Bayes
+                - O que é o algoritmo Naive Bayes?
+É um algoritmo de classificação que se baseia em probabilidades de um evento ocorrer, conforme descrito pelo teorema de Bayes
+                - Quais são as premissas deste algoritmo?
+Features independentes
+                - Por que ele é "Naive"?
+Por que ele considera que cada uma das features analisadas é independente da outra, o que não é verdade na vida real. Por isso, diz-se que ele é biased, mas mesmo assim performa bem e tem baixa variância.
+                - Por que tem Bayes no nome dele? (Vejam o teorema de Bayes)
+Por que é baseado no Teorema de Bayes, que descreve a probabilidade de um evento baseado em conhecimento anterior de condições que podem estar relacionadas ao evento.
+ 
+                - Como ele funciona? (Vamos fazer algumas interações do algoritmo para entender como ele funciona)
+                - Hipótese de independência das features e simplificação?
+                - O que é Naive Bayes Bernouli, Gaussiano e Multinomial? (Qual a diferença entre cada um e quando usar?)
+                                  - https://scikit-learn.org/stable/modules/naive_bayes.html
+                - O que é a correção laplaciana? (correção de Laplace)
+Ela serve para corrigir algum elemento que tenha frequência 0 na base de treino, o que faz com que a probabilidade total do evento seja 0. Para que isso não aconteça, acrescenta-se 1 à frequência de todos os eventos na base de treino.
+                - Qual a complexidade computacional do Naive Bayes? Ele é rápido?
+A complexidade computacional é baixa e ele é bastante rápido.
+
+Pros:
+- Fácil de entender
+- Pode ser treinado com datasets pequenos
+- É um bom classificador, mas um mau estimador, então não levar em consideração predict_proba
+Cons:
+- Se houver features com probabilidade 0 a probabilidade total tb será 0 (pode ser corrigido)
+- Assumir independência dos dados
+
+Muitos usado para classificação de textos, filtro de spam em e-mails, análises de sentimento, sistemas de recomendação
+ 
+- Normalmente o intuito da discussão é abordar os seguintes pontos sobre os algoritmos e técnicas:
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
