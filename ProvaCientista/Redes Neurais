@@ -1,0 +1,50 @@
+- No próximo encontro do Estudo Dirigido vamos falar sobre: Redes Neurais 
+                - O que são Redes Neurais? 
+Consiste em nós e conexões entre os nós. Ela pode ter diferentes funções de ativação em seus nós (essas funções podem ser sigmoide, RelU, Soft Plus, etc).
+Elas podem ter várias entradas, várias saídas, vários nós e muitas conexões entre os nós.
+                - O que é um perceptron? 
+É o modelo mais antigo de neurônio. Soma as entradas, as passa como parâmetro na função de ativação e passa para a camada de saída.
+                - Quais são suas premissas? 
+Perceptron: somente problemas linearmente separáveis.
+É não paramétrico.
+Deixando ele mais complexo conseguimos aproximar qualquer função.
+P/ ficar não linear, função de ativação precisa ser não linear
+                - Qual a estrutura de um neurônio artificial? 
+Ele tem as entradas, que podem ser os valores observados, uma saída de outro neurônio, um bias ou qualquer combinação entre estes elementos.
+O bias, que é um erro sistemático somado ao valor de entrada.
+As forças de conexão sinápticas (peso w) que multiplica as entradas.
+O somatório das entradas, multiplicadas por w e somadas ao bias.
+A função de ativação.
+A função de saída.
+
+https://www.gsigma.ufsc.br/~popov/aulas/rna/neuronio_artificial/index.html
+                - Como funciona um perceptron? 
+Ele recebe as entradas, as multiplica por seu respectivo peso (w) passa pela função de ativação e como output temos a decisão de saída sim ou não, 0 ou 1.
+Um único perceptron é um classificador binário
+
+                - O que é uma MLP (Multilayer Perceptron)? 
+São vários perceptrons organizados em diversas camadas trabalhando juntos para resolver problemas mais complexos.
+MLP = Rede Neural.
+MLP com 3 camadas: Non Deep
+MLP 4 camadas +: Deep Neural Network
+
+                - Como a função de custo podem impactar a MLP? 
+Em cada neurônio o que saiu e o que eu esperava que saísse? Dependendo da função de erro e custo pode demorar mais, mas sempre vai convergir.
+Onde redes neurais ficam alucinadas -> Ler
+                - Como atualizar os pesos da rede? (Backpropagation)  
+                
+                - Como funciona
+                1 - Multiplica ponto x pelo valor de w (weight)
+                2 - Soma-se o w
+                3 - Aplica-se como x na função de ativação
+                4 - Pega-se o y da função de ativação e multiplica-se pelo parâmetro seguinte (weight 2)
+                5 - soma-se o de cima e o de baixo
+                6 - soma-se o bias
+                7 - resultado final 
+                
+                - Backpropagation
+                Cálculo da derivada da SSR (Sum of Squared Residuals) em relação ao parâmetro.
+                Usar gradient descent
+                
+                1 - Pegar valores aleatórios de uma curva normal para os w.
+
