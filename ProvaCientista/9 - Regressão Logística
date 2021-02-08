@@ -1,0 +1,22 @@
+Como encontrar o melhor squiggle da regressão logística
+1 - Tranforma a probabilidade em log(odds): vira uma reta.
+2 - Projeta os pontos observados na reta
+3 - Computa o log(odds) (eixo y) de cada ponto projetado na reta
+4 - Calcula a probabilidade para cada ponto através da fórmula p = e**log(odds)/(1+e**log(odds))
+5 - Calcula a likelihood de cada  ponto (é a própria probabilidade p já calculada)
+6 - Calcula a likelihood de cada ponto referente à sua categoria:
+  Se o ponto é da categoria 1, então o valor de p é a likelihood
+  Se o ponto é da categoria 0, então 1-p é o valor da likelihood
+Multiplica-se todas as likelihoods e aplica-se a log (ñ é necessessariamente necessário aplicar a log
+7 - Volta para a reta, rotaciona, e retorna para o passo 1
+8 - A squiggle com maior likelihood é escolhida.
+
+R² 
+log(likelihood) = LLfit da best fitting line
+log(likelihood) da worst fitting line (lembrar: overall probability of obesity in the dataset)
+LL(overall probability) => bad fit
+
+R² = (LL(overall probability) - LLfit) / LL(overall probability)
+
+p-value
+2*(LLfit - LLop) = chi²
