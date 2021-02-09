@@ -1,0 +1,40 @@
+- No próximo encontro do Estudo Dirigido vamos falar sobre: Árvores de Decisão
+Para variáveis categóricas: utilizar algoritmo ID3
+                - O que são árvores de decisão?
+É um método de aprendizado supervisionado e não paramétrico utilizado para classificação e regressão.
+                - Como é uma estrutura de árvore?
+Ela possui um nó raiz, representando o elemento mais importante, a primeira decisão de divisão de grupos da árvore.
+Os nós intermediários que vem do nó raiz ou de nós intermediários anteriores, sempre após uma decisão e contém também uma nova decisão e novas separações de grupos
+As folhas que são o fim da árvore, não realizando mais separações de grupos e já determinando uma classificação.
+                - Como lemos esta estrutura de árvore/grafo?
+                - Como estas estruturas podem ser interpretadas em dimensões?
+
+                - Como elas funcionam?
+Elas são construídas em um formato top down, da raiz, passando pelos galhos até a folha. Sempre tomando uma decisão e separando o grupo de dados em mais grupos, cada vez mais homogêneos.
+                - Como se dá o corte das árvores de decisão? Existe uma métrica de corte melhor?
+O corte de inicia a partir das folhas, de forma que a acurácia geral do modelo não seja perturbada.
+Primeiro o data set de treino é dividido em dois: T treino e V validação
+
+
+                - Como funciona o corte para variáveis numéricas? E para categóricas?
+                - Vamos criar um pseudocódigo do algoritmo;
+                - Como funciona a poda e a pré-poda?
+Pré-poda: alteração da profundidade (depth da árvore) ou número mínimo de samples, no sci kit learn é a max depth.
+                - Quais são as vantagens de uma árvore de decisão?
+•	Baixa complexidade computacional
+•	Fácil entendimento
+•	Lida bem com variáveis irrelevantes para a resposta necessária
+                - Quais são as desvantagens? Como podemos contornar isso?
+•	Tende ao overfitting. Para contornar realiza-se o processo de poda da árvore.
+                - Qual a complexidade computacional? Ela é rápida?
+Ela tem baixa complexidade computacional e é rápida
+
+- Normalmente o intuito da discussão é abordar os seguintes pontos sobre os algoritmos e técnicas:
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+
