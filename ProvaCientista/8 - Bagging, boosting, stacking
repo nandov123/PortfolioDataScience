@@ -1,0 +1,51 @@
+- No próximo encontro do Estudo Dirigido vamos falar sobre: Bagging (Random Forest), Boosting (ADA Boosting) e Stacking;
+                - O que é ensemble?
+É a combinação de múltiplos modelos de machine learning, ‘weak learners’
+                - Qual objetivo de ensemble em machine learning?
+Obter modelos com maior acurácia, mais robustos
+                - Qual a relação com o Trade Off viés-variância;
+Um modelo com pouco grau de liberdade tem um viés (bias), está underfittado. Já um com alto grau de liberdade tem alta variância (overfittado).
+O trade off viés-variância que o ensemble faz traz um equilíbrio, pois ele combinada vários modelos que podem estar com viés ou alta variância, trazendo pesos diferentes para o modelo final e o deixando mais equilibrado.
+                - O que é bagging? Qual o objetivo dele?
+É gerar o bootstrap dos dados, criar as várias árvores de decisão (random forest) e submeter o dado novo a cada uma das árvores, obtendo o resultado de cada uma e fazendo uma média para obter o resultado final.
+O objetivo é obter uma maior acurácia nas classificações.
+                - O que é bootstrap?
+Transformação de um dataset em outro dataset, selecionando as linhas do dataset original de forma randômica, podendo inclusive selecionar a mesma linha mais de uma vez.
+                - O que é o Random Forest?
+É a criação de várias árvores de decisão a partir de bootstraps, garantindo uma maior acurácia na classificação.
+                - Como o Random Forest funciona?
+É criado um bootstrap, e desse bootstrap é criada uma árvore de decisão, para cada um dos nós são selecionadas um número pré-setado de varíaveis aleatórias por nó (depois essa quantidade pode ser alterada para melhorar a acurácia) para se tomar a decisão de qual é melhor utilizar.
+O processo é repetido até obeterem-se centenas de árvores.
+                - Como estimar a acurácia de uma ranom forest
+Selecionar os Out of the bag samples e quantificar quantos são classificados corretamente pela random forest.
+                - O que é boosting? Qual o objetivo dele?
+
+                - O que é o ADA Boosting?
+ADA Boosting utiliza 3 princípios para melhorar uma decision tree/random forest:
+1)	Ela não forma árvore, mas tocos (um nó e duas folhas), que são os weak learners
+2)	Alguns tocos tem um peso maior
+3)	Cada toco é montado levando em consideração os erros cometidos pelo anterior
+
+                - Como o ADA Boosting funciona?
+1 -  determina qual dos tocos cometerá o menor número de erros
+2 – Calcula o ammount of say desse toco baseado na quantidade de erros
+Dá um peso maior (fórmula) para samples que foram classificados errados.
+3 – Duas possibilidades, calcula o weighted gini ou cria um novo dataset com o elemento de maior peso aparecendo mais vezes.
+4 – Cria um novo toco
+5 – Para classificar um novo elemento, ele é classificado por todos os tocos e depois os ammounts of say são somados para decidir qual é a classificação final.
+                - O que é Stacking? Qual o objetivo dele?
+Ele também é um método de ensemble, mas que combina weak learners diferentes (diferentes algoritmos)
+                - Como o Stacking funciona?
+ 
+
+- Normalmente o intuito da discussão é abordar os seguintes pontos sobre os algoritmos e técnicas:
+                - O que é?
+                - Quais são as premissas que sustentam?
+                - Como funciona?
+                - Como avaliamos?
+                - Quais são as vantagens?
+                - Quais são as desvantagens?
+                - Como corrigimos ou contornamos estas desvantagens?
+                
+  https://machinelearningmastery.com/bagging-ensemble-with-python/
+
