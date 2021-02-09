@@ -24,6 +24,7 @@ Pré-poda: alteração da profundidade (depth da árvore) ou número mínimo de 
 •	Baixa complexidade computacional
 •	Fácil entendimento
 •	Lida bem com variáveis irrelevantes para a resposta necessária
+Lida bem com valores faltantes
                 - Quais são as desvantagens? Como podemos contornar isso?
 •	Tende ao overfitting. Para contornar realiza-se o processo de poda da árvore.
                 - Qual a complexidade computacional? Ela é rápida?
@@ -37,4 +38,9 @@ Ela tem baixa complexidade computacional e é rápida
                 - Quais são as vantagens?
                 - Quais são as desvantagens?
                 - Como corrigimos ou contornamos estas desvantagens?
+                
+  P/ variáveis contínuas: ordenar os valores, calcular a média entre cada dois valores e calcular o gini para a divisão do dataset por cada uma das médias.
+  Variáveis categóricas com mais de duas possibilidades (ex.: azul, verde e vermelho). As separações possíveis seriam as seguintes: azul, verde, vermelho,
+  azul ou verde, azul ou vermelhor, verde ou vermelho.
+  
 
