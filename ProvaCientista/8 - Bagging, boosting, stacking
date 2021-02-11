@@ -58,3 +58,8 @@ Cons
 AdaBoost is sensitive to noise data. It is highly affected by outliers because it tries to fit each point perfectly. AdaBoost is slower compared to XGBoost.
 
 https://machinelearningmastery.com/stacking-ensemble-machine-learning-with-python/
+
+ADA Boost
+1 - AdaBoost combina vários weak learners. A maioria sendo tocos.
+2 - Alguns tocos tem um peso maior que outros
+3 - Cada toco é feito levando em consideração os erros do toco anterior.
