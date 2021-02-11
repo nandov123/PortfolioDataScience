@@ -26,7 +26,7 @@ Kernel polinomial seta o problema em uma ou mais dimensões, dependendo dos resu
 Radial Kernel: e^-y(a-b)^2
 Ele age como um weighted Nearest Neighbours, portante os pontos mais próximas tem muitas influência em como o ponto será classificado.
 Ele mostra o relacionamento entre dois pontos em infinitas dimensões.
-Computacionalmente, os kernels são mais fácil de usar e custam menos do que aumentar o espaço das features.
+Computacionalmente, os kernels são mais fáceis de usar e custam menos do que aumentar o espaço das features.
                 - O que se faz quando se tem mais de 2 classes para ser classificadas?
 Existem duas abordagens:
 One versus one, em que os pontos são classificados pelas hiperplanos de duas em duas classificações. Depois é contado o número de vezes que o ponto foi colocado em cada uma das observações
