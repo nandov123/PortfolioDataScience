@@ -1,0 +1,26 @@
+1 - Matriz de confusão
+              Verdadeiro
+            Sim     Não
+Pred  Sim   TP      FP
+      Não   FN      TN
+      
+Sensitivity (recall): % de positivos reais corretamente classificados
+= TP / (TP+FN)
+Precisão: Proporção de resultados positivos corretamente classificados
+TP / (TP+FP)
+Specificity: % de negativos reais corretamente classificados
+= TN / (TN+FP)
+Recall: 
+Se tiver mais de 2 classificações, tem que ser calculado um contra todos
+
+2 - ROC (Receiver Operator Characteristic) e AUC (Area Under the Curve)
+Eixe y: Precisão
+Eixo x: 1 - Recall
+
+Para Regressão logística, o threshold de divisão dos dados vai sendo movido e a precisão e recall vai sendo plotado no gráfico conforme o threshold é movido.
+
+3 - AUC
+
+Área abaixo da curva ROC.
+
+Calcula-se as curvas ROC para modelos diferentes e compara-se a AUC para cada uma. A maior AUC é melhor.
