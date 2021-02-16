@@ -1,0 +1,34 @@
+- O que é regressão? O que muda de regressão para classificação? E de regressão para agrupamento? 
+Regressão: estimar parâmetros que resultem em uma equação que tem como resultado uma variável contínua.
+Na classificação, o target era uma variável categórica, na regressão é contínua.
+Na regressão temos variáveis target a serem preditas, no agrupamento não temos, estamos apenas avaliando pontos que têm características semelhantes, pontos mais próximos e colocando eles em um cluster de elementos semelhantes.
+                - As 6 premissas da regressão linear (Suposições de Gauss-Markov); 
+1 – O modelo de regressão é linear nos parâmetros
+2 – Os valores de x e y são provenientes de uma amostra aleatória
+3 – Os valores de x não são constantes: Var(x)>0
+4 – Média condicional do erro é 0. X é exógeno, determinada fora do modelo. Se média condicional do erro é <> 0, x é endógeno.
+Se as 4 suposições forem verdadeiras, estimadores de MQO (Mínimos quadrados ordinários) são não viesados (em média acertam o valor do parâmetro populacional)
+5 – Erros homocedásticos. Var(u|x) = constante
+Se 1 a 5 forem satisfeitos, estimadores de MQO serão mais eficientes.
+6 – Erro deve ser normalmente distribuído
+Se 1 a 6 satisfeitas, os estimadores de MQO serão normalmente distribuídos, permitindo realizar inferências.
+
+                               - 1 até 4: https://www.youtube.com/watch?v=ui0Hdd0U_qc 
+                               - 5 até 6: https://www.youtube.com/watch?v=let-pzq5rp8 
+                - Como estimar as parâmetros da regressão Método dos Mínimos Quadrados; 
+Os parâmetros são ajustados para o ponto em que a função de custo (Método dos Mínomos Quadrados) apresenta um valor mínimo, isto é, um erro mínimo. Isto é feito através do cálculo da derivada da função de custo. Igualando a derivada a 0 e resolvendo a equação obtemos o ponto em que o custo é mínimo (Gradient Descent).
+MSE: Somatório (ypredito – yreal)^2 / número_de_elementos
+                - Problemas da Regressão e como lidar com eles: 
+                               - Heterocedasticidade; 
+Variância não constante
+Utilizar regressão polinomial
+
+                               - Multicolinearidade; 
+Multicolinearidade acontece quando alguns parâmetros são muito grandes e ditam para onde vai o modelo.
+A regressão de Ridge ajuda a resolver essa questão, nela é introduzido um lambda setado manualmente que penaliza erros muito grandes e consequentemente diminui parâmetros muito grandes. (Regularização)
+                               - Auto-correlação; 
+                - Vantagens e desvantagens; 
+
+
+Elastic Net regression: qnt tem mts variáveis
+
