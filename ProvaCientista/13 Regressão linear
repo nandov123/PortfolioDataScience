@@ -32,3 +32,11 @@ A regressão de Ridge ajuda a resolver essa questão, nela é introduzido um lam
 
 Elastic Net regression: qnt tem mts variáveis
 
+p-valor: variação explicada por x / variação não explicada por x
+
+R² = (SSmean - SSfit)/SSmean
+F = (ssmean - ssFit)/(pfit-pmean)/SSfit/(n-pfit)
+
+pfit = número de parâmetros na linha fitada: ex.: intercepto e slope = 2
+pmean: número de parametros na linha média: ex.: 1 (linha horizontal)
+
